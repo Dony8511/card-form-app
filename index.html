@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CARD APP</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="light">
+<button onclick="SwitchTheme()" id="theme" class="theme">light mode</button>
+<img src="assets/images/bg.svg" alt="" class="bg_img">
+
+<div class="Card">
+    <div class="face front-face">
+        <img src="assets/images/card-logo.svg" alt="" class="card-logo">
+
+        <div class="values">
+            <p class="card_number">0000 0000 0000 0000</p>
+
+            <div style="justify-content: space-between;" class="row">
+                <p class="card_name">vasiliy ushkov</p>
+
+                <p class="expdate">00/00</p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="face back-face">
+        <p class="card_cvc">000</p>
+    </div>
+</div>
+
+<form onkeyup="UpdateValues()"  action="#" method="post">
+    <div class="collum">
+        <label for="card_name">Cardholder name</label>
+        <input  required placeholder="CARDHOLDER NAME" type="text" name="card_name" id="card_name">
+    </div>
+
+    <div class="collum">
+        <label for="card_number">Card number</label>
+        <input maxlength="19" required placeholder="CARD NUMBER" type="text" name="card_number" id="card_number">
+    </div>
+
+
+    <div class="row">
+        <div class="collum">
+            <label for="card_month">Exp. date (MM/YY)</label>
+            <div class="row dates">
+                <input maxlength="2" required placeholder="MM" type="text" name="card_month" id="card_month">
+                <input maxlength="2" required placeholder="YY" type="text" name="card_year" id="card_year">
+            </div>
+
+        </div>
+
+        <div class="collum">
+            <label for="card_month">cvc</label>
+            <input maxlength="3" required placeholder="e.g 123" type="text" name="card_cvc" id="card_cvc">
+        </div>
+
+    </div>
+    <button id="submit" class="submit">Confirm</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
